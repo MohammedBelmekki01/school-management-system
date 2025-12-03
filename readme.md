@@ -1,258 +1,206 @@
-## CloudSchool
+# School Management System
 
-[![Codeship Status for hrshadhin/school-management-system](https://app.codeship.com/projects/09010350-b97f-0136-1477-5a7589b245e6/status?branch=master)](https://app.codeship.com/projects/312233)
 [![license](https://img.shields.io/badge/license-AGPL-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![php](https://img.shields.io/badge/php-7.2-brightgreen.svg?logo=php)](https://www.php.net)
 [![laravel](https://img.shields.io/badge/laravel-6.x-orange.svg?logo=laravel)](https://laravel.com)
 
-```
-                       _____  _                    _   _____        _                    _ 
-                      / ____|| |                  | | / ____|      | |                  | |
-                     | |     | |  ___   _   _   __| || (___    ___ | |__    ___    ___  | |
-                     | |     | | / _ \ | | | | / _` | \___ \  / __|| '_ \  / _ \  / _ \ | |
-                     | |____ | || (_) || |_| || (_| | ____) || (__ | | | || (_) || (_) || |
-                      \_____||_| \___/  \__,_| \__,_||_____/  \___||_| |_| \___/  \___/ |_|       
-```                                                                                                                               
+A comprehensive School Management System built with Laravel and PHP 7. This project helps educational institutions manage their daily operations including student admissions, attendance, exams, results, employee management, and much more.
 
-Another School Management System build with Laravel and PHP 7
+## 📋 Index
 
-## :loudspeaker: **For Enterprise Edition(EE) checkout [here](https://github.com/hrshadhin/school-management-system/tree/empty)**
-
-## Index
-
-- [Have a Query?](#have-a-query)
-- [Demo](#demo)
-  - [Enterprise Edition (EE)](#enterprise-edition)
 - [Features](#features)
 - [Installation](#installation)
-  - [Installing dependencies](#installing-dependencies)
-  - [Download and setup](#download-and-setup)
-  - [Use the app](#use-the-app)
-- [Documentation](#documentation)
-- [Changelog/Timeline](#timeline)
-- [Screenshot](#screenshot)
+  - [Prerequisites](#prerequisites)
+  - [Setup Instructions](#setup-instructions)
+  - [Running the Application](#running-the-application)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
 - [Contributing](#contributing)
-  - [To-do](#to-do)
-  - [Contributers](#contributers)
-- [Issues](#issues)
 - [License](#license)
+- [Credits](#credits)
 
-## Have a query
+## ✨ Features
 
-[:arrow_up: Back to top](#index)
+### Academic Management
 
-:mega: Join our discord channel: [CloudSchool](https://discord.gg/7rXyuu8):mega:
+- **Academic Year Management**: Setup and manage academic years
+- **Academic Calendar**: Configure and view academic calendars
+- **Institute Setup**: Configure institute/school details
+- **Class & Section Management**: Organize classes and sections
+- **Subject & Teacher Management**: Assign subjects and teachers
 
-:mega: Send us an email: [info@cloudschoolbd.com](mailto:info@cloudschoolbd.com):mega:
+### Student Management
 
-## Demo
+- **Student Admission**: Handle new student registrations
+- **Student Attendance**: Track daily attendance
+- **Student Promotion**: Promote students to next classes
+- **Exam & Grading**: Configure exam rules and grading systems
+- **Marks & Results**: Record and manage student marks and results
 
-[:arrow_up: Back to top](#index)
+### Staff Management
 
-#### Enterprise Edition
+- **Employee Management**: Maintain employee records
+- **Employee Attendance**: Track staff attendance
+- **Employee Leave Management**: Handle leave requests and approvals
 
-- Website: [http://demo.cloudschoolbd.com](http://demo.cloudschoolbd.com)
-- App login: [http://demo.cloudschoolbd.com/login](http://demo.cloudschoolbd.com/login)
+### System Features
 
-  | Username   | Password |
-  | ---------- | :------- |
-  | superadmin | super99  |
-  | admin      | demo123  |
+- **User & Role Management**: ACL with permission grid
+- **User-wise Dashboard**: Customized dashboards based on roles
+- **Report Settings**: Configure various reports
+- **Dynamic Front Website**: Public-facing website with CMS
+- **Photo Gallery**: Manage and display photos
+- **Event Management**: Create and manage school events
+- **Google Analytics Integration**: Track website analytics
+- **User Notifications**: System-wide notification system
 
-## Features
+## 🚀 Installation
 
-[:arrow_up: Back to top](#index)
-
-| Community Edition                            |              Enterprise Edition              |
-| -------------------------------------------- | :------------------------------------------: |
-| Academic Year manage                         |             Academic Year manage             |
-| Academic Calendar Setup                      |           Academic Calendar Setup            |
-| Institute Setup                              |               Institute Setup                |
-| Class & Section Manage                       |            Class & Section Manage            |
-| Subject & Teacher Manage                     |           Subject & Teacher Manage           |
-| Student Admission                            |              Student Admission               |
-| Student Attendance                           |              Student Attendance              |
-| Exam & Grading Rules                         |             Exam & Grading Rules             |
-| Marks & Result                               |       Easy Marks Entry & Result Manage       |
-| Student Promotion                            |  Dynamic and more advance Student Promotion  |
-| Employees Manage                             |               Employees Manage               |
-| Employees Attendance                         |             Employees Attendance             |
-| Employees Leave                              |               Employees Leave                |
-|                                              |            Employees Work Outside            |
-|                                              |              SMS Gateway Setup               |
-|                                              |            Email & SMS Templating            |
-|                                              |      Attendance notification email/sms       |
-|                                              |           Id Card templates Manage           |
-|                                              |       Employee & Student id card print       |
-| User & Role manage with permission grid(ACL) | User & Role manage with permission grid(ACL) |
-| User wise Dashboard                          |             User wise Dashboard              |
-| Report Settings                              |               Report Settings                |
-| Only 5 Reports                               |               **40+** Reports                |
-| Dynamic Front Website                        |            Dynamic Front Website             |
-| Website Management Panel                     |           Website Management Panel           |
-| Photo Gallery                                |                Photo Gallery                 |
-| Event Manage                                 |                 Event Manage                 |
-| Google Analytics                             |               Google Analytics               |
-| User Notification                            |              User Notification               |
-|                                              |               Online Admission               |
-|                                              |         Online Admit Card & Payslip          |
-|                                              |                 Notice Board                 |
-|                                              |  Student & Employee Id card bulk/mass print  |
-|                                              |                Account Manage                |
-|                                              |                Budget Manage                 |
-|                                              |                Account Heads                 |
-|                                              |               Student Invoice                |
-|                                              |           Income / Expense Manage            |
-|                                              |                   Payroll                    |
-|                                              |               Salary Template                |
-|                                              |           Employee Salary Payment            |
-|                                              |          Hostel & Collection Manage          |
-|                                              |                Library Manage                |
-|                                              |        Issue book and fine collection        |
-|                                              |           Academic Calendar Print            |
-|                                              |          Bulk SMS and Email Sending          |
-|                                              |               **40+** Reports                |
-
-## Installation
-
-[:arrow_up: Back to top](#index)
-
-#### Installing dependencies
+### Prerequisites
 
 - PHP >= 7.2
-- OpenSSL PHP Extension
-- PDO PHP Extension
-- Mbstring PHP Extension
-- Tokenizer PHP Extension
-- XML PHP Extension
-- Ctype PHP Extension
-- JSON PHP Extension
-- MySQL >= 5.6 `OR` MariaDB >= 10.1
-- [hrshadhin/laravel-userstamps](https://github.com/hrshadhin/laravel-userstamps.git) [**Already Installed**]
-- NodeJS, npm, webpack
+- MySQL >= 5.6 or MariaDB >= 10.1
+- Composer
+- Node.js & npm
+- Required PHP Extensions:
+  - OpenSSL
+  - PDO
+  - Mbstring
+  - Tokenizer
+  - XML
+  - Ctype
+  - JSON
 
-#### Download and setup
+### Setup Instructions
 
-- Clone the repo
+1. **Clone the repository**
 
-  **For Windows run below commands before cloning the Repo.**
+   ```bash
+   git clone https://github.com/mohammedbelmekki01/school-management-system.git
+   cd school-management-system
+   ```
 
-  ```
-  git config --global core.eol lf
-  git config --global core.autocrlf false
-  ```
+2. **Install PHP dependencies**
 
-  ```
-  $ git clone https://github.com/hrshadhin/school-management-system.git cloudschool
-  ```
+   ```bash
+   composer install
+   ```
 
-- change directory
-  ```
-  $ cd cloudschool
-  ```
-- Copy sample `env` file and change configuration according to your need in ".env" file and create Database
-  ```
-  $ cp .env.example .env
-  ```
-- Install php libraries
-  ```
-  $ composer install
-  ```
-- Setup application
- - Setup application 
-- Setup application
- - Setup application 
-- Setup application
+3. **Configure environment**
 
-  - Method 1: By one command
+   ```bash
+   cp .env.example .env
+   ```
 
-    ```
-    # setup cloudschool with out demo data
-    $ php artisan fresh-install
+   Edit `.env` file and configure your database settings:
 
-    # setup cloudschool with demo data
-    $ php artisan fresh-install --with-data
-     # OR
-    $ php artisan fresh-install -d
-    ```
+   ```
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=school_db
+   DB_USERNAME=your_username
+   DB_PASSWORD=your_password
+   ```
 
-  - Method 2: Step by step
+4. **Setup the application**
 
-    ```
-    $ php artisan storage:link
-    $ php artisan key:generate --ansi
+   **Option 1: Quick setup with demo data**
 
-    # Create database tables and load essential data
-    $ php artisan migrate
-    $ php artisan db:seed
+   ```bash
+   php artisan fresh-install --with-data
+   ```
 
-    # Load demo data
-    $ php artisan db:seed --class DemoSiteDataSeeder
-    $ php artisan db:seed --class DemoAppDataSeeder
+   **Option 2: Setup without demo data**
 
-    # Clear all caches
-    $ php artisan view:clear
-    $ php artisan route:clear
-    $ php artisan config:clear
-    $ php artisan cache:clear
-    ```
+   ```bash
+   php artisan fresh-install
+   ```
 
-- Install frontend(css,js) dependency libraries and bundle them
-  ```
-  $ npm install
-  $ npm run backend-prod
-  $ npm run frontend-prod
-  ```
-- Start development server
-  ```
-  $ php artisan serve
-  ```
+   **Option 3: Manual setup**
 
-#### Use the app
+   ```bash
+   php artisan storage:link
+   php artisan key:generate --ansi
+   php artisan migrate
+   php artisan db:seed
 
-[:arrow_up: Back to top](#index)
+   # Optional: Load demo data
+   php artisan db:seed --class DemoSiteDataSeeder
+   php artisan db:seed --class DemoAppDataSeeder
+   ```
 
-- Website: [http://localhost:8000](http://localhost:8000)
-- App login: [http://localhost:8000/login](http://localhost:8000/login)
+5. **Install and compile frontend assets**
 
-  | Username   | Password |
-  | ---------- | :------- |
-  | superadmin | super99  |
-  | admin      | demo123  |
+   ```bash
+   npm install
+   npm run backend-prod
+   npm run frontend-prod
+   ```
 
-## Documentation
+### Running the Application
 
-[:arrow_up: Back to top](#index)
+Start the development server:
 
-- [http://ug.cloudschoolbd.com](http://ug.cloudschoolbd.com)
+```bash
+php artisan serve
+```
 
-## Timeline
+The application will be available at:
 
-- [Check Here](CHANGELOG.md)
+- **Website**: http://localhost:8000
+- **Admin Login**: http://localhost:8000/login
 
-## Screenshot
+#### Default Credentials
 
-[:arrow_up: Back to top](#index)
+| Username   | Password |
+| ---------- | -------- |
+| superadmin | super99  |
+| admin      | demo123  |
 
-- ![Dashboard](../assets/screenshots/ce/dashboard.png?raw=true)
-- **[More...](../assets/screenshots/ce/showme.md)**
+## 💡 Usage
 
-## Contributing
+After logging in, you can:
 
-[:arrow_up: Back to top](#index)
+1. **Configure Institute Settings**: Set up your school/institute details
+2. **Create Academic Year**: Define the current academic year
+3. **Add Classes & Sections**: Create class structures
+4. **Register Students**: Add new student admissions
+5. **Manage Attendance**: Track daily attendance for students and staff
+6. **Conduct Exams**: Set up exams and record marks
+7. **Generate Reports**: Access various academic and administrative reports
 
-Don't be shy to make some PR's here :smile:
+## 📸 Screenshots
 
-#### To-do
+![Dashboard](screenshot/ce/dashboard.png)
 
-- [ ] Add **unit & integration**. Like real quick!
-- [ ] Add shortcut link for create things. i.e: `student`, `attendance`, `marks` etc
-- [ ] Add new UI theme version **AdminLTE**
-- [ ] Update Jquery with datetime picker library
+More screenshots available in the `screenshot/ce/` directory.
 
-#### Contributers
+## 🤝 Contributing
 
-A big shout out to all the contributers, more specifically to these guys
+Contributions are welcome! Here's how you can help:
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+**Why AGPL?** [Read Here](https://www.gnu.org/licenses/why-affero-gpl.html)
+
+## 🙏 Credits
+
+This project is a fork of the CloudSchool project originally created by [H.R. Shadhin](https://github.com/hrshadhin).
+
+Special thanks to all contributors of the original project:
 
 - [H.R. Shadhin](https://github.com/hrshadhin)
 - [Ashutosh Das](https://github.com/pyprism)
@@ -260,35 +208,12 @@ A big shout out to all the contributers, more specifically to these guys
 - [Zahid Irfan](https://github.com/zahidirfan)
 - [Oshane Bailey](https://github.com/b4oshany)
 
-## Issues
+## 📞 Contact
 
-[:arrow_up: Back to top](#index)
+Mohammed Belmekki - [@mohammedbelmekki01](https://github.com/mohammedbelmekki01)
 
-- If you faced any problems, first check previous issue list. If doesn't exists then create a new one.
-- You can report the bugs at the [issue tracker](https://github.com/hrshadhin/school-management-system/issues)
-- If you discover a security vulnerability within CloudSchool app, please send an e-mail to [sos@cloudschoolbd.com](mailto:sos@cloudschoolbd.com). All security vulnerabilities will be promptly addressed.
+Project Link: [https://github.com/mohammedbelmekki01/school-management-system](https://github.com/mohammedbelmekki01/school-management-system)
 
-## License
+---
 
-[:arrow_up: Back to top](#index)
-
-Copyright (c) the respective developers and maintainers, as shown by the AUTHORS file.
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License as published
-by the Free Software Foundation, either version 3 of the License, or any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU Affero General Public License for more details.
-
-You should have received a copy of the GNU Affero General Public License
-along with this program. If not, see <http://www.gnu.org/licenses/>.
-
-All Frameworks and libraries are distributed with it's own license.
-
-**As it is a free(free as in freedom) software. To keep the credit for this works, you should
-not remove application footer information text**
-
-**Why AGPL? [Read Here](https://www.gnu.org/licenses/why-affero-gpl.html)**
+**Note**: This is a fork and modification of the original CloudSchool project. All credit for the original work goes to the original authors and contributors.

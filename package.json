@@ -1,4 +1,12 @@
 {
+    "name": "school-management-system",
+    "version": "3.0.0",
+    "description": "School Management System - A comprehensive Laravel-based application",
+    "author": "Mohammed Belmekki <mohammedbelmekki01@example.com>",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mohammedbelmekki01/school-management-system"
+    },
     "private": true,
     "scripts": {
         "prefrontend-dev": "rm -rf public/frontend",

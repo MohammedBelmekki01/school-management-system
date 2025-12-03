@@ -1,5 +1,5 @@
 {
-    "name": "hrshadhin/school-management-system",
+    "name": "mohammedbelmekki01/school-management-system",
     "version": "3.0.0",
     "description": "Another School Management System build with laravel",
     "keywords": [
@@ -23,20 +23,20 @@
     "license": "AGPL-3.0-or-later",
     "authors": [
         {
-            "name": "H.R.Shadhin",
-            "email": "dev@hrshadhin.me",
-            "homepage": "http://hrshadhin.me",
+            "name": "Mohammed Belmekki",
+            "email": "mohammedbelmekki01@example.com",
+            "homepage": "https://github.com/mohammedbelmekki01",
             "role": "Maintainer"
         }
     ],
-    "homepage": "http://cloudschoolbd.com",
+    "homepage": "https://github.com/mohammedbelmekki01/school-management-system",
     "readme": "./readme.md",
     "time": "2016-02-14",
     "support": {
-        "email": "sos@cloudschoolbd.com",
-        "issues": "https://github.com/hrshadhin/school-management-system/issues",
-        "wiki": "https://github.com/hrshadhin/school-management-system/wiki",
-        "source": "https://github.com/hrshadhin/school-management-system"
+        "email": "mohammedbelmekki01@example.com",
+        "issues": "https://github.com/mohammedbelmekki01/school-management-system/issues",
+        "wiki": "https://github.com/mohammedbelmekki01/school-management-system/wiki",
+        "source": "https://github.com/mohammedbelmekki01/school-management-system"
     },
     "repositories": [
         {
