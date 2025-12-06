@@ -176,14 +176,6 @@ After logging in, you can:
 
 More screenshots available in the `screenshot/ce/` directory.
 
-## 🤝 Contributing
-
-Contributions are welcome! Here's how you can help:
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
 ## 📄 License
@@ -198,15 +190,9 @@ You should have received a copy of the GNU Affero General Public License along w
 
 ## 🙏 Credits
 
-This project is a fork of the CloudSchool project originally created by [H.R. Shadhin](https://github.com/hrshadhin).
+special thanks to me with some edits to this project to make it cool 
+mohammed belmekki
 
-Special thanks to all contributors of the original project:
-
-- [H.R. Shadhin](https://github.com/hrshadhin)
-- [Ashutosh Das](https://github.com/pyprism)
-- [order4adwriter](https://github.com/order4adwriter)
-- [Zahid Irfan](https://github.com/zahidirfan)
-- [Oshane Bailey](https://github.com/b4oshany)
 
 ## 📞 Contact
 
