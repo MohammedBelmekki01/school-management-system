@@ -27,13 +27,13 @@ class PermissionMiddleware
     public function handle($request, Closure $next)
     {
         // Super admins bypass all permission checks
-        if($request->user()->is_super_admin) {
+        if ($request->user()->is_super_admin) {
             return $next($request);
         }
 
         $routeName = $request->route()->getName();
 
-        if(!$request->user()->can($routeName)) {
+        if (!$request->user()->can($routeName)) {
             // Log unauthorized access attempts for security auditing
             Log::warning('Unauthorized access attempt', [
                 'user_id'    => $request->user()->id,
@@ -43,7 +43,7 @@ class PermissionMiddleware
                 'user_agent' => $request->userAgent(),
             ]);
 
-            if($request->ajax() || $request->expectsJson()) {
+            if ($request->ajax() || $request->expectsJson()) {
                 return response()->json([
                     'success' => false,
                     'message' => 'Access denied. You do not have permission to perform this action.',
@@ -53,7 +53,7 @@ class PermissionMiddleware
         }
 
         // Check for user force logout flag
-        if($request->user()->force_logout){
+        if ($request->user()->force_logout) {
             $request->user()->force_logout = 0;
             $request->user()->save();
 

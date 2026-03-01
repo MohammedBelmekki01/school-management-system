@@ -106,7 +106,7 @@ class ValidationHelper
             'mother_name'      => 'nullable|string|max:100',
             'mother_phone_no'  => 'nullable|string|max:20',
             'present_address'  => 'nullable|string|max:500',
-            'permanent_address'=> 'nullable|string|max:500',
+            'permanent_address' => 'nullable|string|max:500',
         ];
     }
 

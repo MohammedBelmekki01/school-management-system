@@ -63,7 +63,7 @@ class Exam extends Model
      */
     public function scopeIclass($query, $classId)
     {
-        if($classId){
+        if ($classId) {
             return $query->where('class_id', $classId);
         }
 

@@ -79,7 +79,7 @@ class Student extends Model
 
     public function getBloodGroupAttribute($value)
     {
-        if($value) {
+        if ($value) {
             return Arr::get(AppHelper::BLOOD_GROUP, $value);
         }
         return "";

@@ -138,4 +138,3 @@ class ReportHelper
         return $value;
     }
 }
-
