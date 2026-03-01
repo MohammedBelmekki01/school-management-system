@@ -47,10 +47,26 @@ class Student extends Model
         'status',
     ];
 
+    /**
+     * Get the registrations for this student.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function registration()
     {
         return $this->hasMany('App\Registration', 'student_id');
     }
+
+    /**
+     * Get the user account associated with this student.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function user()
+    {
+        return $this->belongsTo('App\User', 'user_id');
+    }
+
     public function getGenderAttribute($value)
     {
         return Arr::get(AppHelper::GENDER, $value);
@@ -67,5 +83,55 @@ class Student extends Model
             return Arr::get(AppHelper::BLOOD_GROUP, $value);
         }
         return "";
+    }
+
+    /**
+     * Get student's full name with guardian info.
+     *
+     * @return string
+     */
+    public function getFullInfoAttribute()
+    {
+        $info = $this->name;
+        if ($this->father_name) {
+            $info .= ' (Father: ' . $this->father_name . ')';
+        }
+        return $info;
+    }
+
+    /**
+     * Scope a query to only include active students.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeActive($query)
+    {
+        return $query->where('status', AppHelper::ACTIVE);
+    }
+
+    /**
+     * Scope a query to filter students by gender.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @param  int  $gender
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeGender($query, $gender)
+    {
+        if ($gender) {
+            return $query->where('gender', $gender);
+        }
+        return $query;
+    }
+
+    /**
+     * Check if the student has a phone number registered.
+     *
+     * @return bool
+     */
+    public function hasContactInfo()
+    {
+        return !empty($this->phone_no) || !empty($this->email);
     }
 }
