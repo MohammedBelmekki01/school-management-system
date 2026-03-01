@@ -75,7 +75,7 @@ class Handler extends ExceptionHandler
 
             $statusCode = $exception->getStatusCode();
 
-            if(!env('APP_DEBUG', false)) {
+            if (!env('APP_DEBUG', false)) {
                 if (!$request->user() && AppHelper::isFrontendEnabled()) {
                     $locale = Session::get('user_locale');
                     App::setLocale($locale);

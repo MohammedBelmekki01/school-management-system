@@ -20,6 +20,7 @@ use Illuminate\Http\Request;
 | These routes are accessible without authentication.
 | Used by the frontend website and external integrations.
 */
+
 Route::prefix('v1')->namespace('Api')->group(function () {
 
     // System status

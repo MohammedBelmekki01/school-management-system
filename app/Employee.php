@@ -45,7 +45,7 @@ class Employee extends Model
     use SoftDeletes;
     use UserstampsTrait;
 
-    protected $dates = ['joining_date','leave_date'];
+    protected $dates = ['joining_date', 'leave_date'];
 
 
     /**
@@ -124,10 +124,9 @@ class Employee extends Model
      */
     public function setLeaveDateAttribute($value)
     {
-        if(strlen($value)) {
+        if (strlen($value)) {
             $this->attributes['leave_date'] = Carbon::createFromFormat('d/m/Y', $value)->format('Y-m-d');
-        }
-        else{
+        } else {
             $this->attributes['leave_date'] = null;
         }
     }
@@ -137,7 +136,7 @@ class Employee extends Model
      */
     public function setDutyStartAttribute($value)
     {
-        if(strlen($value)){
+        if (strlen($value)) {
             $this->attributes['duty_start'] = Carbon::createFromFormat('h:i a', $value)->format('H:i:s');
         }
     }
@@ -147,7 +146,7 @@ class Employee extends Model
      */
     public function getDutyStartAttribute($value)
     {
-        if(!strlen($value)){
+        if (!strlen($value)) {
             return null;
         }
 
@@ -159,7 +158,7 @@ class Employee extends Model
      */
     public function setDutyEndAttribute($value)
     {
-        if(strlen($value)){
+        if (strlen($value)) {
             $this->attributes['duty_end'] = Carbon::createFromFormat('h:i a', $value)->format('H:i:s');
         }
     }
@@ -169,7 +168,7 @@ class Employee extends Model
      */
     public function getDutyEndAttribute($value)
     {
-        if(!strlen($value)){
+        if (!strlen($value)) {
             return null;
         }
         return Carbon::parse($value);
